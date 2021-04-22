@@ -85,12 +85,12 @@ var (
 	flagN             = flag.Bool("n", false, "dump symbol table")
 	FlagS             = flag.Bool("s", false, "disable symbol table")
 	FlagW             = flag.Bool("w", false, "disable DWARF generation")
-	FlagL             = flag.Bool("l", false, "disable full RELRO")
 	flag8             bool // use 64-bit addresses in symbol table
 	flagInterpreter   = flag.String("I", "", "use `linker` as ELF dynamic linker")
 	FlagDebugTramp    = flag.Int("debugtramp", 0, "debug trampolines")
 	FlagDebugTextSize = flag.Int("debugppc64textsize", 0, "debug PPC64 text section max")
 	FlagStrictDups    = flag.Int("strictdups", 0, "sanity check duplicate symbol contents during object file reading (1=warn 2=err).")
+	FlagRelro         = flag.Bool("relro", true, "enable RELRO for buildmode=pie")
 	FlagRound         = flag.Int("R", -1, "set address rounding `quantum`")
 	FlagTextAddr      = flag.Int64("T", -1, "set text segment `address`")
 	flagEntrySymbol   = flag.String("E", "", "set `entry` symbol name")
